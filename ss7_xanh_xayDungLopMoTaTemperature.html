@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    function Temperature(C, F, Kevin) {
+        this.c = C;
+        this.f = F;
+        this.kevin = Kevin;
+        this.setC = function (C) {
+            this.c = Number(prompt('Nhập độ C'));
+        };
+        this.getC = function () {
+            return this.c;
+        };
+        this.setF = function (F) {
+            this.f = F;
+        };
+        this.getF = function () {
+            return this.c * 1.8 + 32;
+        };
+        this.setKevin = function (Kevin) {
+            this.kevin = Kevin;
+        };
+        this.getKevin = function () {
+            return this.c + 273.15;
+        };
+    }
+
+    let temperature = new Temperature();
+    temperature.setC();
+    document.write('Độ F là: ' + temperature.getF() + '. Độ Kevin là: ' + temperature.getKevin());
+</script>
+</body>
+</html>
